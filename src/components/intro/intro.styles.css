@@ -1,0 +1,27 @@
+main{
+    background-color: var(--main-color);
+    min-height: 100vh;
+    position: relative;
+
+}
+
+.hearts{
+    mix-blend-mode: soft-light;
+    filter: drop-shadow(10px 10px 10px black);
+}
+
+.left-hearts,.right-hearts {
+    position: absolute;
+    opacity: 0.5;
+}
+
+.left-hearts{
+    left: 0;
+    top: -5%;
+}
+
+.right-hearts{
+    right: 0;
+    bottom: 5%;
+}
+
