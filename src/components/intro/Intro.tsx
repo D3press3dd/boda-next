@@ -1,28 +1,28 @@
+import { Navbar } from '../navbar/Navbar';
+import first from '../../../public/assets/gallery-intro/1.png';
+import second from '../../../public/assets/gallery-intro/2.png';
+import third from '../../../public/assets/gallery-intro/3.png';
+import fourth from '../../../public/assets/gallery-intro/4.png';
+import { Hearts } from './SideHearts';
+
 import './intro.styles.css';
-import Image from 'next/image';
-import leftHearts from '../../../public/assets/left-hearts.svg';
-import rightHearts from '../../../public/assets/right-hearts.svg';
+import { HeroText } from './HeroText';
+
+const gallery = [first, second, third, fourth];
 
 
-export function Intro ():JSX.Element {
+
+export function Intro(): JSX.Element {
 	return (
 		<main>
-			<Image
-				className='hearts left-hearts'
-				priority
-				src={leftHearts}
-				alt=""
-				width={300}
-				height={564}
-			/>
-			<Image
-				className='hearts right-hearts'
-				priority
-				src={rightHearts}
-				alt=""
-				width={300}
-				height={564}
-			/>
+			<Navbar />
+			<Hearts />
+			<HeroText/>
+			<section className='hero-gallery'>
+				{gallery.map((img, index) => {
+					return <img src={img.src} key={index} alt="" />;
+				})}
+			</section>
 			
 		</main>
 	);

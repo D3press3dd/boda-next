@@ -1,27 +1,73 @@
-main{
-    background-color: var(--main-color);
-    min-height: 100vh;
-    position: relative;
-
+main {
+  background: url("../../../public/hero-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  min-height: 100vh;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: -10;
+}
+h1 {
+  font-style: italic;
+  font-size: 86px;
+  text-align: center;
+}
+h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: lighter;
+}
+.hearts {
+  mix-blend-mode: soft-light;
+  filter: drop-shadow(10px 10px 10px black);
 }
 
-.hearts{
-    mix-blend-mode: soft-light;
-    filter: drop-shadow(10px 10px 10px black);
+.left-hearts,
+.right-hearts {
+  position: absolute;
+  opacity: 0.5;
 }
 
-.left-hearts,.right-hearts {
-    position: absolute;
-    opacity: 0.5;
+.left-hearts {
+  left: 0;
+  top: -5%;
 }
 
-.left-hearts{
-    left: 0;
-    top: -5%;
+.right-hearts {
+  right: 0;
+  bottom: 30%;
 }
 
-.right-hearts{
-    right: 0;
-    bottom: 5%;
+.hero-text {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-block: calc(50vh - 60px - 212px);
+  padding-top: calc(50vh - 60px - 212px);
+  padding-bottom: calc(50vh - 60px - 212px);
 }
 
+.hero-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+.hero-gallery > img {
+  object-fit: cover;
+  height: 516px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  h1{
+    font-size: calc(86px/2);
+  }
+}

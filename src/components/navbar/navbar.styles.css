@@ -1,0 +1,28 @@
+/* styles/navbar.css */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.nav-left p {
+  font-weight: bold;
+  margin: 0;
+}
+
+.nav-right ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.nav-right li {
+  margin-right: 10px;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: #fff;
+}

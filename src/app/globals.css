@@ -1,5 +1,5 @@
 :root {
-  --main-color:#C05252;
+  --main-color: #c05252;
 }
 
 *,
@@ -12,10 +12,18 @@
 
 html {
   font-size: 62.5%;
+  -webkit-font-smooth: antialiased; 
+  -moz-osx-font-smooth: grayscale; 
+  font-smooth: antialiased; 
+}
+
+h1,h2 {
+  font-family: "Arapey";
 }
 
 body {
   font-size: 1.6rem;
+  color: #ffffff;
 }
 
 img {
